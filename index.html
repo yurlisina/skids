@@ -1,1 +1,84 @@
-<h1>Yo les skids</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            height: 100vh;
+            background: #0f1117;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            animation: up 0.5s ease both;
+        }
+
+        @keyframes up {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 36px;
+            height: 36px;
+            background: #4f8ef7;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo svg { width: 18px; height: 18px; color: #fff; }
+
+        a.link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.4rem;
+            background: #181b24;
+            border: 1px solid #22252f;
+            border-radius: 7px;
+            color: #c9cdd8;
+            font-size: 0.82rem;
+            font-weight: 400;
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a.link:hover { border-color: #4f8ef7; color: #fff; }
+
+        a.link svg { width: 12px; height: 12px; opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="logo">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="5" height="5" rx="1"/>
+                <rect x="9" y="2" width="5" height="5" rx="1"/>
+                <rect x="2" y="9" width="5" height="5" rx="1"/>
+                <rect x="9" y="9" width="5" height="5" rx="1"/>
+            </svg>
+        </div>
+
+        <a href="https://breachforums.ac" class="link" target="_blank" rel="noopener noreferrer">
+            Accéder
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2 10L10 2M4 2h6v6"/>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>
